@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {UpdateComponent} from "../update/update.component";
+import {ListComponent} from "./list/list.component";
+import {UpdateComponent} from "./update/update.component";
 
 const routes: Routes = [
+  {
+    path:'liste',
+    component:ListComponent
+  },
   {
     path:'ajouter',
     component:UpdateComponent

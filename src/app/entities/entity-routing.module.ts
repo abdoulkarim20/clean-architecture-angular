@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path:'departement',
-    loadChildren:()=>import('./departement/departement.module').then(module=>module.DepartementModule)
+    loadChildren: () => import('./departement/departement.module').then(module=>module.DepartementModule)
   }
 ];
 

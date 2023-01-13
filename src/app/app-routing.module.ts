@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path:'',
-    loadChildren:()=>import('./entities/entity-routing.module').then(module=>module.EntityRoutingModule)
+    loadChildren: () => import(`./entities/entity-routing.module`).then(module=>module.EntityRoutingModule)
   }
 ];
 

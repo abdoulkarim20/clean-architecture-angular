@@ -7,6 +7,8 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import {HttpClientModule} from "@angular/common/http";
+import {departementReducer} from "./entities/ngrx/departement.reducer";
+import {DepartementEffects} from "./entities/ngrx/departement.effects";
 
 @NgModule({
   declarations: [
@@ -16,8 +18,8 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
+    StoreModule.forRoot({departementState:departementReducer}),
+    EffectsModule.forRoot([DepartementEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [],

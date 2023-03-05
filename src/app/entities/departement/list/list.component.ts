@@ -12,8 +12,8 @@ export class ListComponent implements OnInit{
   constructor(private store:Store) {
   }
   departements$=this.store.pipe(select(selectDepartements))
-  ngOnInit():void{
-    this.store.dispatch(invokDepartementsAPI())
+  ngOnInit(): void {
+    this.store.dispatch(invokDepartementsAPI());
   }
 
 }

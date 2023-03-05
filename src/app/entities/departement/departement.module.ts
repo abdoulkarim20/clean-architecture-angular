@@ -9,17 +9,21 @@ import {departementReducer} from "./store/departement.reducer";
 import {EffectsModule} from "@ngrx/effects";
 import {DepartementEffects} from "./store/departement.effects";
 import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
+import { ListeTestNgrxComponent } from './liste-test-ngrx/liste-test-ngrx.component';
 
 
 @NgModule({
   declarations: [
     ListComponent,
-    UpdateComponent
+    UpdateComponent,
+    ListeTestNgrxComponent
   ],
   imports: [
     CommonModule,
     DepartementRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     StoreModule.forFeature("myDepartements",departementReducer),
     EffectsModule.forFeature([DepartementEffects])
   ]
